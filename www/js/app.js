@@ -38,5 +38,5 @@ angular.module('MyTodoApp', ['ionic', 'MyTodoApp.controllers', 'MyTodoApp.servic
         templateUrl:'views/edit-todo.html'
     });
 
-    // $urlRouterProvider.otherwise('/todos');
+    $urlRouterProvider.otherwise('/todos');
 });
