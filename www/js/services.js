@@ -1,5 +1,5 @@
 angular.module('MyTodoApp.services', [])
-	   .factory('Todo', ['$http' 'PARSE_CREDENTIALS', function($http, PARSE_CREDENTIALS) {
+	   .factory('Todo', ['$http', 'PARSE_CREDENTIALS', function($http, PARSE_CREDENTIALS) {
 	return {
 		getAll:function(){
             return $http.get('https://api.parse.com/1/classes/Todo', {
@@ -26,7 +26,7 @@ angular.module('MyTodoApp.services', [])
                 }
             });
         },
-        edit:function(id,data){
+        edit:function(id, data){
             return $http.put('https://api.parse.com/1/classes/Todo/'+id, data, {
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
@@ -45,7 +45,7 @@ angular.module('MyTodoApp.services', [])
             });
         }
    	}
-}]).value('PARSE_CREDENTIALS',{
+}]).value('PARSE_CREDENTIALS', {
     APP_ID: '95hQCXDGfZIZxTgoQP7F1yBsgxogEIHvFE3kVZn7',
     REST_API_KEY:'mDh13FHGeBQouDL7ONKBPVnP2wcME1pqdifAivFi'
 });

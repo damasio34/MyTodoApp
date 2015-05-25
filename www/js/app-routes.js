@@ -17,4 +17,4 @@ angular.module('MyTodoApp').config(function($stateProvider){
         });
 
         $urlRouterProvider.otherwise('/todos');
-}); 
+});

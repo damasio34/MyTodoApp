@@ -1,5 +1,5 @@
 angular.module('MyTodoApp.controllers', [])
-		.controller('TodoListController', ['$scope', 'Todo', function($scope, Todo){
+	.controller('TodoListController', ['$scope', 'Todo', function($scope, Todo){
 
     Todo.getAll().success(function(data){
         $scope.items = data.results;
