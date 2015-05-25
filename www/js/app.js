@@ -17,7 +17,6 @@ angular.module('MyTodoApp', ['ionic', 'MyTodoApp.controllers', 'MyTodoApp.servic
             StatusBar.styleDefault();
         }
 
-        // $state.go('todos');
     });
 
 }).config(function($stateProvider, $urlRouterProvider){

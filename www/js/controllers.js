@@ -15,13 +15,13 @@ angular.module('MyTodoApp.controllers', [])
     $scope.todo = {};
 
     $scope.create = function(){
-        Todo.create({content:$scope.todo.content}).success(function(data){
+        Todo.create({ content:$scope.todo.content }).success(function(data){
             $state.go('todos');
         });
     }
 }]).controller('TodoEditController', ['$scope', 'Todo', '$state', '$stateParams', function($scope, Todo, $state, $stateParams){
 
-    $scope.todo = {id:$stateParams.id, content:$stateParams.content};
+    $scope.todo = { id:$stateParams.id, content:$stateParams.content };
 
     $scope.edit = function(){
         Todo.edit($scope.todo.id,{content:$scope.todo.content}).success(function(data){
